@@ -68,7 +68,7 @@ document.addEventListener("keyup", function(even){
   if(event.keyCode == 13){
     const toDo = input.value;
 
-    // if the input isn't empty
+    // if the input isn;t empty
     if(toDo){
       addToDo(toDo);
 
@@ -79,7 +79,7 @@ document.addEventListener("keyup", function(even){
         trash: false
       });
 
-      // get item from localstorage ( this code must be added where the LIST array is updated)
+      // get item from localstorage.  This code must be added where the LIST array is updated
       localStorage.setItem("TODO", JSON.stringify(LIST));
 
       id++;
@@ -88,7 +88,7 @@ document.addEventListener("keyup", function(even){
   }
 });
 
-// complete to do
+// completes the to do
 function completeToDo(element){
   element.classList.toggle(CHECK);
   element.classList.toggle(UNCHECK);
@@ -104,7 +104,7 @@ function removeToDo(element){
   LIST[element.id].trash = true;
 }
 
-//target the items created dynamically
+// target the items created dynamically
 
 list.addEventListener("click", function(event){
   const element = event.target; //return the clicked element inside list
